@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0946E43822BE23921962E10E /* PodVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A124B52109872A685B2B07 /* PodVaultApp.swift */; };
+		8C8AE488385F90462538265E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95827EABF2A7BC8637C76176 /* DashboardView.swift */; };
+		8CF85A255F17FBE5BA2F8ABE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBD7B4D76F764133C0D79C /* MainTabView.swift */; };
+		C0E353090F96B015C191BBC0 /* VaultCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */; };
+		CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81428BEEF63C5C6F14B3E238 /* MockDataService.swift */; };
+		E2EE8D5324EC296D38AD6CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C6530A3A8267356645BCDD /* Assets.xcassets */; };
+		E7B3EE66D76152DDB44DD437 /* NFTGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D785F07AA2179E527800A /* NFTGalleryView.swift */; };
+		E8AD64D3CB1A6C733EAE12B9 /* NFTCollectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C550F3A6182A223AB21D1 /* NFTCollectible.swift */; };
+		F2FDB7381C8E84BF629CA05F /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */; };
+		F44ACFD2C83857BF8ED79C21 /* CryptoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B144E071248BE7B7E3BCE /* CryptoAsset.swift */; };
+		F83C7DE7DA9FF310351F609A /* VaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A45D70D4F2ADFCB1511D08 /* VaultView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultCredential.swift; sourceTree = "<group>"; };
+		070B144E071248BE7B7E3BCE /* CryptoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAsset.swift; sourceTree = "<group>"; };
+		12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PodVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEBD7B4D76F764133C0D79C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		5E7C550F3A6182A223AB21D1 /* NFTCollectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollectible.swift; sourceTree = "<group>"; };
+		6A6D785F07AA2179E527800A /* NFTGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTGalleryView.swift; sourceTree = "<group>"; };
+		80A124B52109872A685B2B07 /* PodVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodVaultApp.swift; sourceTree = "<group>"; };
+		81428BEEF63C5C6F14B3E238 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		8E5399B0B9856F68C97B4620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95827EABF2A7BC8637C76176 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		95A45D70D4F2ADFCB1511D08 /* VaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultView.swift; sourceTree = "<group>"; };
+		9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		C8C6530A3A8267356645BCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1755D0DFE367B6673DE98104 = {
+			isa = PBXGroup;
+			children = (
+				416FF16D9BEC7B0737105AC9 /* Sources */,
+				BB3D0B32C9AA1F705C78B6BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B63A7A8F970B559F4CAD79B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				070B144E071248BE7B7E3BCE /* CryptoAsset.swift */,
+				5E7C550F3A6182A223AB21D1 /* NFTCollectible.swift */,
+				01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		416FF16D9BEC7B0737105AC9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C8C6530A3A8267356645BCDD /* Assets.xcassets */,
+				8E5399B0B9856F68C97B4620 /* Info.plist */,
+				80A124B52109872A685B2B07 /* PodVaultApp.swift */,
+				3B63A7A8F970B559F4CAD79B /* Models */,
+				681BD85DA6C8FC127B472039 /* Services */,
+				8889089429BDF0592280F699 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		681BD85DA6C8FC127B472039 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81428BEEF63C5C6F14B3E238 /* MockDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8889089429BDF0592280F699 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95827EABF2A7BC8637C76176 /* DashboardView.swift */,
+				3BEBD7B4D76F764133C0D79C /* MainTabView.swift */,
+				6A6D785F07AA2179E527800A /* NFTGalleryView.swift */,
+				9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */,
+				95A45D70D4F2ADFCB1511D08 /* VaultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB3D0B32C9AA1F705C78B6BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		850A4860242DD00D10AE8B75 /* PodVault */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E7F0EA7D635DE216AA00E3 /* Build configuration list for PBXNativeTarget "PodVault" */;
+			buildPhases = (
+				F7FB5ACE17D7F35CE82E67F8 /* Sources */,
+				358E1A025488FEF9FE72392F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PodVault;
+			packageProductDependencies = (
+			);
+			productName = PodVault;
+			productReference = 12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14B97C6E6D4549FDE8ABEC5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					850A4860242DD00D10AE8B75 = {
+						DevelopmentTeam = M9NL4PJ9AL;
+					};
+				};
+			};
+			buildConfigurationList = 29EEB992EF851650B5838B9A /* Build configuration list for PBXProject "PodVault" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 1755D0DFE367B6673DE98104;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BB3D0B32C9AA1F705C78B6BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				850A4860242DD00D10AE8B75 /* PodVault */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		358E1A025488FEF9FE72392F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2EE8D5324EC296D38AD6CE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7FB5ACE17D7F35CE82E67F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44ACFD2C83857BF8ED79C21 /* CryptoAsset.swift in Sources */,
+				8C8AE488385F90462538265E /* DashboardView.swift in Sources */,
+				8CF85A255F17FBE5BA2F8ABE /* MainTabView.swift in Sources */,
+				CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */,
+				E8AD64D3CB1A6C733EAE12B9 /* NFTCollectible.swift in Sources */,
+				E7B3EE66D76152DDB44DD437 /* NFTGalleryView.swift in Sources */,
+				0946E43822BE23921962E10E /* PodVaultApp.swift in Sources */,
+				F2FDB7381C8E84BF629CA05F /* UnlockView.swift in Sources */,
+				C0E353090F96B015C191BBC0 /* VaultCredential.swift in Sources */,
+				F83C7DE7DA9FF310351F609A /* VaultView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4489CB25573D8DB9B38DDFF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M9NL4PJ9AL;
+				INFOPLIST_FILE = Sources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.popusoiionut.PodVault;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		545A4030C03A990A7BB9414C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M9NL4PJ9AL;
+				INFOPLIST_FILE = Sources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.popusoiionut.PodVault;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73C1C26B38BE106BC39AC4D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9562C6CFF18F3B9AE03D60DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29EEB992EF851650B5838B9A /* Build configuration list for PBXProject "PodVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9562C6CFF18F3B9AE03D60DE /* Debug */,
+				73C1C26B38BE106BC39AC4D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F9E7F0EA7D635DE216AA00E3 /* Build configuration list for PBXNativeTarget "PodVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545A4030C03A990A7BB9414C /* Debug */,
+				4489CB25573D8DB9B38DDFF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14B97C6E6D4549FDE8ABEC5C /* Project object */;
+}
