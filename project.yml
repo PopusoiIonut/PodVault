@@ -1,4 +1,9 @@
 name: PodVault
+packages:
+  WalletConnect:
+    url: https://github.com/WalletConnect/WalletConnectSwiftV2
+    from: 1.0.0
+
 targets:
   PodVault:
     type: application
@@ -12,6 +17,11 @@ targets:
         UILaunchScreen: {}
         UIRequiresFullScreen: YES
         ITSAppUsesNonExemptEncryption: false
+    dependencies:
+      - package: WalletConnect
+        product: WalletConnectModal
+      - package: WalletConnect
+        product: WalletConnectPairing
     settings:
       base:
         DEVELOPMENT_TEAM: M9NL4PJ9AL

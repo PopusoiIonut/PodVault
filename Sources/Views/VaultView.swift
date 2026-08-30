@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct VaultView: View {
+    @ObservedObject var wcService = WalletConnectService.shared
     @State private var credentials = MockDataService.shared.vaultCredentials
     @State private var revealedIds: Set<UUID> = []
     @State private var showToast = false
@@ -40,6 +41,10 @@ struct VaultView: View {
                         
                         // Credentials List
                         VStack(spacing: 16) {
+                            if wcService.isConnected, let address = wcService.walletAddress {
+                                activeConnectionRow(address: address)
+                            }
+                            
                             ForEach(credentials) { cred in
                                 credentialRow(cred: cred)
                             }
@@ -73,6 +78,73 @@ struct VaultView: View {
                 }
             }
         }
+    }
+    
+    private func activeConnectionRow(address: String) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "link.circle.fill")
+                    .foregroundColor(Color(hex: "2ECC71"))
+                    .font(.subheadline)
+                
+                Text("Active Wallet Session")
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(hex: "2ECC71"))
+                
+                Spacer()
+                
+                Text("Verified")
+                    .font(.caption2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(hex: "2ECC71"))
+                    .padding(.vertical, 2)
+                    .padding(.horizontal, 6)
+                    .background(Color(hex: "2ECC71").opacity(0.1))
+                    .cornerRadius(4)
+            }
+            
+            Text("Linked Public Key")
+                .font(.headline)
+                .foregroundColor(.white)
+            
+            HStack {
+                Text(address)
+                    .font(.system(.caption, design: .monospaced))
+                    .foregroundColor(.white)
+                    .lineLimit(2)
+                
+                Spacer()
+                
+                // Copy Button
+                Button(action: {
+                    copyToClipboard(value: address, name: "Public Wallet Key")
+                }) {
+                    Image(systemName: "doc.on.doc.fill")
+                        .foregroundColor(Color(hex: "00A3FF"))
+                        .padding(8)
+                }
+            }
+            .padding(.vertical, 8)
+            .padding(.horizontal, 14)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.black.opacity(0.2))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color.white.opacity(0.04), lineWidth: 1)
+                    )
+            )
+        }
+        .padding(18)
+        .background(
+            RoundedRectangle(cornerRadius: 22)
+                .fill(Color(hex: "2ECC71").opacity(0.03))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 22)
+                        .stroke(Color(hex: "2ECC71").opacity(0.15), lineWidth: 1)
+                )
+        )
     }
     
     private func credentialRow(cred: VaultCredential) -> some View {

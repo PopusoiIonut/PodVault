@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0946E43822BE23921962E10E /* PodVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A124B52109872A685B2B07 /* PodVaultApp.swift */; };
+		1B5D3F61CC79CAC4A17DC874 /* WalletConnectModal in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA5BCAFF0988E839B434EE6 /* WalletConnectModal */; };
+		82443AE766561BB8827D1C5B /* WalletConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */; };
+		8913556DA1C353AB1550EF4F /* WalletConnectPairing in Frameworks */ = {isa = PBXBuildFile; productRef = 652A7397D929FAAC1A8626A6 /* WalletConnectPairing */; };
 		8C8AE488385F90462538265E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95827EABF2A7BC8637C76176 /* DashboardView.swift */; };
 		8CF85A255F17FBE5BA2F8ABE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBD7B4D76F764133C0D79C /* MainTabView.swift */; };
+		B27D07C48567623EE4F4280A /* EthereumRPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F6C22CB59574DE8101BD2 /* EthereumRPCService.swift */; };
 		C0E353090F96B015C191BBC0 /* VaultCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */; };
 		CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81428BEEF63C5C6F14B3E238 /* MockDataService.swift */; };
 		E2EE8D5324EC296D38AD6CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C6530A3A8267356645BCDD /* Assets.xcassets */; };
@@ -25,6 +29,7 @@
 		070B144E071248BE7B7E3BCE /* CryptoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAsset.swift; sourceTree = "<group>"; };
 		12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PodVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEBD7B4D76F764133C0D79C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectService.swift; sourceTree = "<group>"; };
 		5E7C550F3A6182A223AB21D1 /* NFTCollectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollectible.swift; sourceTree = "<group>"; };
 		6A6D785F07AA2179E527800A /* NFTGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTGalleryView.swift; sourceTree = "<group>"; };
 		80A124B52109872A685B2B07 /* PodVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodVaultApp.swift; sourceTree = "<group>"; };
@@ -34,7 +39,20 @@
 		95A45D70D4F2ADFCB1511D08 /* VaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultView.swift; sourceTree = "<group>"; };
 		9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		C8C6530A3A8267356645BCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF1F6C22CB59574DE8101BD2 /* EthereumRPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumRPCService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		575F7C6C35191F8ED17B4FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5D3F61CC79CAC4A17DC874 /* WalletConnectModal in Frameworks */,
+				8913556DA1C353AB1550EF4F /* WalletConnectPairing in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1755D0DFE367B6673DE98104 = {
@@ -71,7 +89,9 @@
 		681BD85DA6C8FC127B472039 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FF1F6C22CB59574DE8101BD2 /* EthereumRPCService.swift */,
 				81428BEEF63C5C6F14B3E238 /* MockDataService.swift */,
+				5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -105,6 +125,7 @@
 			buildPhases = (
 				F7FB5ACE17D7F35CE82E67F8 /* Sources */,
 				358E1A025488FEF9FE72392F /* Resources */,
+				575F7C6C35191F8ED17B4FD0 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +133,8 @@
 			);
 			name = PodVault;
 			packageProductDependencies = (
+				6FA5BCAFF0988E839B434EE6 /* WalletConnectModal */,
+				652A7397D929FAAC1A8626A6 /* WalletConnectPairing */,
 			);
 			productName = PodVault;
 			productReference = 12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */;
@@ -140,6 +163,9 @@
 			);
 			mainGroup = 1755D0DFE367B6673DE98104;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3E00BACDC9ADAB62FAC10945 /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB3D0B32C9AA1F705C78B6BD /* Products */;
 			projectDirPath = "";
@@ -168,6 +194,7 @@
 			files = (
 				F44ACFD2C83857BF8ED79C21 /* CryptoAsset.swift in Sources */,
 				8C8AE488385F90462538265E /* DashboardView.swift in Sources */,
+				B27D07C48567623EE4F4280A /* EthereumRPCService.swift in Sources */,
 				8CF85A255F17FBE5BA2F8ABE /* MainTabView.swift in Sources */,
 				CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */,
 				E8AD64D3CB1A6C733EAE12B9 /* NFTCollectible.swift in Sources */,
@@ -176,6 +203,7 @@
 				F2FDB7381C8E84BF629CA05F /* UnlockView.swift in Sources */,
 				C0E353090F96B015C191BBC0 /* VaultCredential.swift in Sources */,
 				F83C7DE7DA9FF310351F609A /* VaultView.swift in Sources */,
+				82443AE766561BB8827D1C5B /* WalletConnectService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +387,30 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E00BACDC9ADAB62FAC10945 /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwiftV2";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		652A7397D929FAAC1A8626A6 /* WalletConnectPairing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E00BACDC9ADAB62FAC10945 /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectPairing;
+		};
+		6FA5BCAFF0988E839B434EE6 /* WalletConnectModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E00BACDC9ADAB62FAC10945 /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectModal;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14B97C6E6D4549FDE8ABEC5C /* Project object */;
 }
