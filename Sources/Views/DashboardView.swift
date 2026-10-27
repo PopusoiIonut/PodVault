@@ -4,14 +4,16 @@ struct DashboardView: View {
     @Binding var isUnlocked: Bool
     @ObservedObject var wcService = WalletConnectService.shared
     
-    @State private var assets = MockDataService.shared.cryptoAssets
+    @ObservedObject var marketService = MarketPriceService.shared
     @State private var realEthBalance: Double? = nil
     @State private var isLoadingBalance = false
     @State private var balanceError: String? = nil
+    @State private var showingCustomWalletSheet = false
+    @State private var customAddressInput = ""
     
     var totalBalance: Double {
         var sum = 0.0
-        for asset in assets {
+        for asset in marketService.assets {
             if asset.symbol == "ETH" && wcService.isConnected {
                 sum += (realEthBalance ?? 0.0) * asset.priceUsd
             } else {
@@ -43,8 +45,7 @@ struct DashboardView: View {
                                         .fill(Color(hex: "2ECC71"))
                                         .frame(width: 8, height: 8)
                                     Text(truncateAddress(wcService.walletAddress ?? ""))
-                                        .font(.caption)
-                                        .fontWeight(.bold)
+                                        .font(.caption.weight(.bold))
                                         .foregroundColor(.white)
                                 }
                                 .padding(.vertical, 6)
@@ -111,8 +112,7 @@ struct DashboardView: View {
                             
                             VStack(spacing: 8) {
                                 Text("Link Your Crypto Wallet")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
+                                    .font(.title3.weight(.bold))
                                     .foregroundColor(.white)
                                 Text("Connect MetaMask or load the read-only live demo wallet to query real-time blockchain balances.")
                                     .font(.subheadline)
@@ -150,8 +150,7 @@ struct DashboardView: View {
                                     wcService.connectDemoWallet()
                                 }) {
                                     Text("Connect Demo Wallet (vitalik.eth)")
-                                        .font(.subheadline)
-                                        .fontWeight(.semibold)
+                                        .font(.subheadline.weight(.semibold))
                                         .foregroundColor(Color(hex: "00A3FF"))
                                         .padding()
                                         .frame(maxWidth: .infinity)
@@ -159,6 +158,23 @@ struct DashboardView: View {
                                             RoundedRectangle(cornerRadius: 16)
                                                 .stroke(Color(hex: "00A3FF").opacity(0.3), lineWidth: 1)
                                         )
+                                }
+                                
+                                Button(action: {
+                                    showingCustomWalletSheet = true
+                                }) {
+                                    HStack {
+                                        Image(systemName: "magnifyingglass")
+                                        Text("Watch Any Wallet Address")
+                                    }
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundColor(.white.opacity(0.8))
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .fill(Color.white.opacity(0.04))
+                                    )
                                 }
                             }
                             .padding(.top, 10)
@@ -178,8 +194,7 @@ struct DashboardView: View {
                     // Assets List Header
                     HStack {
                         Text("Assets")
-                            .font(.title3)
-                            .fontWeight(.bold)
+                            .font(.title3.weight(.bold))
                             .foregroundColor(.white)
                         Spacer()
                         Text("Market (24h)")
@@ -190,7 +205,7 @@ struct DashboardView: View {
                     
                     // Assets List
                     VStack(spacing: 12) {
-                        ForEach(assets) { asset in
+                        ForEach(marketService.assets) { asset in
                             let isEth = asset.symbol == "ETH"
                             let displayBalance = (isEth && wcService.isConnected) ? (realEthBalance ?? 0.0) : asset.balance
                             let displayValue = (isEth && wcService.isConnected) ? (realEthBalance ?? 0.0) * asset.priceUsd : asset.valueUsd
@@ -239,8 +254,7 @@ struct DashboardView: View {
                                         .foregroundColor(.white)
                                     
                                     Text(String(format: "%@%.2f%%", asset.change24h > 0 ? "+" : "", asset.change24h))
-                                        .font(.caption)
-                                        .fontWeight(.bold)
+                                        .font(.caption.weight(.bold))
                                         .foregroundColor(asset.change24h > 0 ? Color(hex: "2ECC71") : Color(hex: "E74C3C"))
                                 }
                             }
@@ -264,11 +278,85 @@ struct DashboardView: View {
             .background(Color(hex: "0F0F12").edgesIgnoringSafeArea(.all))
             .onAppear {
                 loadBalance()
+                Task {
+                    await marketService.fetchLivePrices()
+                }
+            }
+            .refreshable {
+                loadBalance()
+                await marketService.fetchLivePrices()
             }
             .onChange(of: wcService.walletAddress) { _ in
                 loadBalance()
             }
+            .sheet(isPresented: $showingCustomWalletSheet) {
+                customWalletSheetView
+            }
         }
+    }
+    
+    private var customWalletSheetView: some View {
+        ZStack {
+            Color(hex: "16161A").edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 20) {
+                Text("Watch Public Wallet")
+                    .font(.title2.weight(.bold))
+                    .foregroundColor(.white)
+                    .padding(.top, 10)
+                
+                Text("Paste any Ethereum address (e.g. 0x...) to track live balances and holdings without sharing private keys.")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
+                TextField("0x71C... or ENS name", text: $customAddressInput)
+                    .font(.system(.body, design: .monospaced))
+                    .padding()
+                    .background(Color.white.opacity(0.04))
+                    .cornerRadius(14)
+                    .foregroundColor(.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(Color.white.opacity(0.1), lineWidth: 1)
+                    )
+                    .padding(.horizontal)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                
+                HStack(spacing: 14) {
+                    Button("Cancel") {
+                        showingCustomWalletSheet = false
+                    }
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.white.opacity(0.04))
+                    .cornerRadius(14)
+                    
+                    Button("Connect") {
+                        let clean = customAddressInput.trimmingCharacters(in: .whitespacesAndNewlines)
+                        if !clean.isEmpty {
+                            wcService.walletAddress = clean
+                            wcService.isConnected = true
+                            showingCustomWalletSheet = false
+                        }
+                    }
+                    .foregroundColor(.white)
+                    .font(.headline.weight(.bold))
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color(hex: "00A3FF"))
+                    .cornerRadius(14)
+                }
+                .padding(.horizontal)
+                
+                Spacer()
+            }
+            .padding(.top, 24)
+        }
+        .applySheetDetents()
     }
     
     private func loadBalance() {
@@ -351,6 +439,17 @@ struct SparklineView: View {
                 }
             }
             .stroke(color, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+        }
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func applySheetDetents() -> some View {
+        if #available(iOS 16.0, *) {
+            self.presentationDetents([.fraction(0.45)])
+        } else {
+            self
         }
     }
 }

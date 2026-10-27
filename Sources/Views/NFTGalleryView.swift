@@ -67,8 +67,7 @@ struct NFTGalleryView: View {
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(nft.collection)
-                    .font(.caption)
-                    .fontWeight(.bold)
+                    .font(.caption.weight(.bold))
                     .foregroundColor(Color(hex: "00A3FF"))
                     .tracking(1)
                 
@@ -82,9 +81,8 @@ struct NFTGalleryView: View {
                         .foregroundColor(.secondary)
                         .font(.caption)
                     Text("\(String(format: "%.2f", nft.floorPriceEth)) ETH")
-                        .font(.subheadline)
+                        .font(.subheadline.weight(.semibold))
                         .foregroundColor(.secondary)
-                        .fontWeight(.semibold)
                 }
             }
             .padding(.horizontal, 8)
@@ -195,8 +193,7 @@ struct NFTGalleryView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             Text(value)
-                .font(.subheadline)
-                .fontWeight(.bold)
+                .font(.subheadline.weight(.bold))
                 .foregroundColor(.white)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

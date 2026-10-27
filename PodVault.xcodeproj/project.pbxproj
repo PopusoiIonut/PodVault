@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0946E43822BE23921962E10E /* PodVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A124B52109872A685B2B07 /* PodVaultApp.swift */; };
 		1B5D3F61CC79CAC4A17DC874 /* WalletConnectModal in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA5BCAFF0988E839B434EE6 /* WalletConnectModal */; };
+		3C8F5ED3D5061A502EEAA6C2 /* MarketPriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5934BEF7391F1C2F2F7A9 /* MarketPriceService.swift */; };
 		82443AE766561BB8827D1C5B /* WalletConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */; };
 		8913556DA1C353AB1550EF4F /* WalletConnectPairing in Frameworks */ = {isa = PBXBuildFile; productRef = 652A7397D929FAAC1A8626A6 /* WalletConnectPairing */; };
 		8C8AE488385F90462538265E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95827EABF2A7BC8637C76176 /* DashboardView.swift */; };
@@ -17,6 +18,7 @@
 		C0E353090F96B015C191BBC0 /* VaultCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */; };
 		CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81428BEEF63C5C6F14B3E238 /* MockDataService.swift */; };
 		E2EE8D5324EC296D38AD6CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C6530A3A8267356645BCDD /* Assets.xcassets */; };
+		E668928016D146069615B065 /* KeychainVaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F8CC128E291AD10E1746 /* KeychainVaultService.swift */; };
 		E7B3EE66D76152DDB44DD437 /* NFTGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D785F07AA2179E527800A /* NFTGalleryView.swift */; };
 		E8AD64D3CB1A6C733EAE12B9 /* NFTCollectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C550F3A6182A223AB21D1 /* NFTCollectible.swift */; };
 		F2FDB7381C8E84BF629CA05F /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */; };
@@ -27,6 +29,7 @@
 /* Begin PBXFileReference section */
 		01FA0BB8FE703200B268C8F4 /* VaultCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultCredential.swift; sourceTree = "<group>"; };
 		070B144E071248BE7B7E3BCE /* CryptoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAsset.swift; sourceTree = "<group>"; };
+		07C5934BEF7391F1C2F2F7A9 /* MarketPriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceService.swift; sourceTree = "<group>"; };
 		12D7D9BB6C7BB4783C5D8B4D /* PodVault.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PodVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEBD7B4D76F764133C0D79C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectService.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		95A45D70D4F2ADFCB1511D08 /* VaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultView.swift; sourceTree = "<group>"; };
 		9F092C91FEE48BBC2CBF4101 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		C8C6530A3A8267356645BCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0E2F8CC128E291AD10E1746 /* KeychainVaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainVaultService.swift; sourceTree = "<group>"; };
 		FF1F6C22CB59574DE8101BD2 /* EthereumRPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumRPCService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				FF1F6C22CB59574DE8101BD2 /* EthereumRPCService.swift */,
+				F0E2F8CC128E291AD10E1746 /* KeychainVaultService.swift */,
+				07C5934BEF7391F1C2F2F7A9 /* MarketPriceService.swift */,
 				81428BEEF63C5C6F14B3E238 /* MockDataService.swift */,
 				5ACF2D87B1D377F452B4A9F5 /* WalletConnectService.swift */,
 			);
@@ -195,7 +201,9 @@
 				F44ACFD2C83857BF8ED79C21 /* CryptoAsset.swift in Sources */,
 				8C8AE488385F90462538265E /* DashboardView.swift in Sources */,
 				B27D07C48567623EE4F4280A /* EthereumRPCService.swift in Sources */,
+				E668928016D146069615B065 /* KeychainVaultService.swift in Sources */,
 				8CF85A255F17FBE5BA2F8ABE /* MainTabView.swift in Sources */,
+				3C8F5ED3D5061A502EEAA6C2 /* MarketPriceService.swift in Sources */,
 				CD905EDABA3C1DDFB81A0FB5 /* MockDataService.swift in Sources */,
 				E8AD64D3CB1A6C733EAE12B9 /* NFTCollectible.swift in Sources */,
 				E7B3EE66D76152DDB44DD437 /* NFTGalleryView.swift in Sources */,
@@ -218,7 +226,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = M9NL4PJ9AL;
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -237,7 +245,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = M9NL4PJ9AL;
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -2,7 +2,18 @@ import SwiftUI
 
 struct MainTabView: View {
     @Binding var isUnlocked: Bool
-    @State private var selectedTab = 0
+    @State private var selectedTab: Int
+    
+    init(isUnlocked: Binding<Bool>) {
+        self._isUnlocked = isUnlocked
+        if CommandLine.arguments.contains("-keys") {
+            self._selectedTab = State(initialValue: 2)
+        } else if CommandLine.arguments.contains("-collectibles") {
+            self._selectedTab = State(initialValue: 1)
+        } else {
+            self._selectedTab = State(initialValue: 0)
+        }
+    }
     
     var body: some View {
         TabView(selection: $selectedTab) {
